@@ -5,6 +5,7 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import GlassCard from "../components/GlassCard";
 
@@ -43,18 +44,24 @@ function LandingPage() {
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
 
-            <button className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-cyan-400 px-6 py-3.5 font-semibold text-slate-950 shadow-[0_10px_35px_rgba(34,211,238,0.2)] transition hover:-translate-y-0.5 hover:bg-cyan-300">
+            <Link
+              to="/jobs"
+              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-cyan-400 px-6 py-3.5 font-semibold text-slate-950 shadow-[0_10px_35px_rgba(34,211,238,0.2)] transition hover:-translate-y-0.5 hover:bg-cyan-300"
+            >
               Find a job
 
               <ArrowRight
                 size={18}
                 className="transition group-hover:translate-x-1"
               />
-            </button>
+            </Link>
 
-            <button className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white shadow-[8px_8px_25px_rgba(0,0,0,0.25)] backdrop-blur-xl transition hover:bg-white/[0.08]">
+            <Link
+              to="/register"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 font-semibold text-white shadow-[8px_8px_25px_rgba(0,0,0,0.25)] backdrop-blur-xl transition hover:bg-white/[0.08]"
+            >
               I'm hiring
-            </button>
+            </Link>
 
           </div>
         </section>
